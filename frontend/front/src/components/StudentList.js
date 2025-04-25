@@ -6,7 +6,7 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
 
   const fetchStudents = async () => {
-    const res = await axios.get('https://studentdb-backend-d10u.onrender.com');
+    const res = await axios.get('https://studentdb-backend-d10u.onrender.com/students');
     setStudents(res.data);
   };
 
