@@ -9,12 +9,12 @@ const EditStudent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/students/${id}`).then(res => setStudent(res.data));
+    axios.get(`https://studentdb-backend-d10u.onrender.com/students/${id}`).then(res => setStudent(res.data));
   }, [id]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:5000/students/${id}`, student);
+    await axios.put(`https://studentdb-backend-d10u.onrender.com/students/${id}`, student);
     alert("Student updated!");
     navigate('/');
   };
