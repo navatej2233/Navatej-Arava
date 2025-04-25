@@ -6,7 +6,7 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
 
   const fetchStudents = async () => {
-    const res = await axios.get('http://localhost:5000/students');
+    const res = await axios.get('https://studentdb-backend-d10u.onrender.com');
     setStudents(res.data);
   };
 
@@ -16,7 +16,7 @@ const StudentList = () => {
 
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure?")) {
-      await axios.delete(`http://localhost:5000/students/${id}`);
+      await axios.delete(`https://studentdb-backend-d10u.onrender.com/students/${id}`);
       fetchStudents();
     }
   };
