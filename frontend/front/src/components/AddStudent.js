@@ -9,7 +9,7 @@ const AddStudent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('https://studentdb-backend-d10u.onrender.com', student);
+    await axios.post('https://studentdb-backend-d10u.onrender.com/students', student);
     alert("Student added!");
     navigate('/');
   };
